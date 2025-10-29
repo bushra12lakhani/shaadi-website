@@ -1,0 +1,6 @@
+body { background:#121212; color:#e6e6e6; }
+.bg-secondary { background:#1f1f1f !important; }
+.placeholder { background:#2a2a2a; color:#bdbdbd; }
+.card { border: none; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+a { text-decoration: none; }
+.btn-outline-light { border-color: rgba(255,255,255,0.12); color:#ddd; }
