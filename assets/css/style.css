@@ -1,6 +1,135 @@
-body { background:#121212; color:#e6e6e6; }
-.bg-secondary { background:#1f1f1f !important; }
-.placeholder { background:#2a2a2a; color:#bdbdbd; }
-.card { border: none; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
-a { text-decoration: none; }
-.btn-outline-light { border-color: rgba(255,255,255,0.12); color:#ddd; }
+/* ==== GLOBAL STYLING ==== */
+body {
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  color: #2c3e50;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  padding: 12px 0;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+.navbar-brand, .nav-btn {
+  color: #fff !important;
+}
+.nav-btn {
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+}
+
+/* ==== BUTTONS ==== */
+.btn-gradient, .btn-save, .view-btn {
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+.btn-gradient:hover, .btn-save:hover, .view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 68, 173, 0.3);
+}
+
+/* ==== FORMS ==== */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 8px rgba(142, 68, 173, 0.3);
+  outline: none;
+}
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* ==== CARD STYLE (used in Members + Dashboard + Profile) ==== */
+.member-card, .welcome-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  padding: 20px;
+}
+.member-card:hover, .welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(142,68,173,0.3);
+}
+.member-photo, .placeholder {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+.placeholder {
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f8c8d;
+}
+
+/* ==== TITLES ==== */
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #8e44ad;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* ==== CENTERED PAGE STYLE (Dashboard / Login / Register / Create Profile) ==== */
+.center-box, .profile-container, .auth-container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 420px;
+  padding: 35px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* ==== TEXT COLORS ==== */
+.text-white { color: #fff; }
+.text-light { color: #f1f1f1; }
+.text-dark { color: #2c3e50; }
+
+/* ==== ANIMATION ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
